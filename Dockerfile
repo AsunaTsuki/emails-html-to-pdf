@@ -3,7 +3,7 @@ FROM python:3.9-slim-buster
 ARG TARGETARCH
 
 COPY install_wkhtmltox.sh /build/install_wkhtmltox.sh
-RUN /build/install_wkhtmltox.sh 0.12.6-1 buster $TARGETARCH
+RUN /build/install_wkhtmltox.sh 0.12.5 buster $TARGETARCH
 RUN rm -R /build
 
 ENV PYTHONPATH=${PYTHONPATH}:${PWD}
